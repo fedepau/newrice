@@ -4,7 +4,7 @@
   "position": "top",
   "height": 12,
   "width": 1912,
-  "modules-left": ["sway/workspaces", "custom/launcher", "cpu", "temperature", "memory", "disk#root", "disk#home", "custom/weather"],
+  "modules-left": ["sway/workspaces", "sway/scratchpad", "custom/launcher", "cpu", "temperature", "memory", "disk#root", "disk#home", "custom/weather"],
   "modules-center": ["clock"],
   "modules-right": ["idle_inhibitor", "backlight", "pulseaudio", "network#interface", "network#band", "battery#BAT0", "battery#BAT1", "custom/power"],
   "margin": "4, 0, 0, 0",
@@ -30,6 +30,14 @@
     "disable-auto-back-and-forth": true
   },
 
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", "󱂬"],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+ 
   "custom/launcher": {
     "format": "󱅥",
     "on-click": "exec rofi -show drun",

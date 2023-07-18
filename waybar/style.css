@@ -60,11 +60,11 @@
 }
 
 #cpu.warning, #memory.warning, #battery.warning {
-  color: #fabd2f;
+  color: #d79921;
 }
 
 #cpu.critical, #temperature.critical, #memory.critical, #battery.critical {
-  color: #fb4934;
+  color: #cc241d;
 }
  
 #custom-power {
