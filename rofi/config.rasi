@@ -1,83 +1,84 @@
 configuration {
-    threads: 0;
-    modi: "calc,drun,window,power-menu:~/.local/bin/rofi-power-menu,ssh";
-    case-sensitive: false;
-    cycle: false;
-    scroll-method: 1;
-    normalize-match: true;
-    no-lazy-grab: true;
-    show-icons: true;
-    icon-theme: "Papirus";
-    markup: true;
-    drun-display-format: "{name}";
-    location: 0;
-    sidebar-mode: false;
-    hover-select: false;
-    eh: 1;
-    terminal: "kitty";
-    display-calc: "Calculator:";
-    display-drun: "Application:";
-    display-window: "Window:";
-    display-ssh: "SSH:";
+  threads: 0;
+  modi: "calc,drun,window,power-menu:~/.local/bin/rofi-power-menu,ssh";
+  case-sensitive: false;
+  cycle: false;
+  scroll-method: 1;
+  normalize-match: true;
+  no-lazy-grab: true;
+  show-icons: true;
+  icon-theme: "Papirus";
+  markup: true;
+  drun-display-format: "{name}";
+  location: 0;
+  sidebar-mode: false;
+  hover-select: false;
+  eh: 1;
+  terminal: "kitty";
+  display-calc: "Calculator:";
+  display-drun: "Application:";
+  display-window: "Window:";
+  display-ssh: "SSH:";
 }
 
 @theme "/dev/null"
 
 * {
-    background-color: #282828;
-    font-family: "JetBrains Mono";
-    text-color: #ebdbb2;
+  background-color: #282828;
+  font-family: "JetBrainsMonoNL Nerd Font";
+  text-color: #ebdbb2;
 }
 
 #window {
-    border: 2px;
-    border-radius: 8px;
-    border-color: #fe8019;
-    transparency: "real";
-    width: 35%;
-    height: 500;
+  border: 2px;
+  border-radius: 8px;
+  border-color: #fe8019;
+  transparency: "real";
+  width: 35%;
+  height: 500;
 }
 
 #scrollbar {
-    enabled: true;
-    background-color: #1d2021;
-    handle-color: #3c3836;
-    border-color: #000000;
+  enabled: true;
+  background-color: #1d2021;
+  handle-color: #3c3836;
+  border-color: #000000;
 }
 
 #listview {
-    columns: 1;
-    fixed-height: false;
-    dynamic: true;
-    scrollbar: true;
-    spacing: 10;
+  columns: 1;
+  fixed-height: false;
+  dynamic: true;
+  scrollbar: true;
+  spacing: 10;
 }
 
 #prompt,
 entry {
-    padding: 10;
+  padding: 8px;
 }
 
 #textbox {
-    padding: 20;
+  padding: 20px;
 }
 
 #element-text,
 button,
 listview {
-    padding: 5;
+  padding: 4px 8px 4px 0px;
 }
 
 #element.selected {
-    background-color: #665c54;
+  background-color: #665c54;
+  padding: 4px 8px 4px 0px;
 }
 
 element-text, element-icon {
-    background-color: inherit;
-    text-color:       inherit;
+  background-color: inherit;
+  text-color: inherit;
 }
 
 #button.selected {
-    background-color: #fe8019;
-    text-color: #1d2021;
+  background-color: #fe8019;
+  text-color: #1d2021;
 }

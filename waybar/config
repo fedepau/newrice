@@ -121,7 +121,7 @@
 
   "clock": {
     "interval": 1,
-    "format": "{:%H:%M:%S %a, %b %d}",
+    "format": "{:%H:%M %a, %b %d}",
     // "timezone":
     "max-length": 24,
     "tooltip": true,
