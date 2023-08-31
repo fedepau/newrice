@@ -17,15 +17,15 @@ configuration {
   terminal: "kitty";
   display-calc: "Calculator:";
   display-drun: "Application:";
-  display-window: "Window:";
   display-ssh: "SSH:";
+  display-window: "Window:";
 }
 
 @theme "/dev/null"
 
 * {
   background-color: #282828;
-  font-family: "JetBrainsMonoNL Nerd Font";
+  font: "JetBrainsMonoNL Nerd Font 12";
   text-color: #ebdbb2;
 }
 
@@ -35,7 +35,7 @@ configuration {
   border-color: #fe8019;
   transparency: "real";
   width: 35%;
-  height: 500;
+  height: 485;
 }
 
 #scrollbar {
