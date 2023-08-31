@@ -49,10 +49,10 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 }
 
 # outputs
-# list outputs: swaymsg -y get_outputs
+# list outputs: swaymsg -t get_outputs
 output eDP-1 {
   resolution 1920x1080
-  bg ~/Pictures/gruvbox_wp/board.png fill
+  bg ~/.config/sway/config.d/wp.jpg fill
 }
 
 # status bar
@@ -62,4 +62,4 @@ bar {
 
 # includes
 include /etc/sway/config.d/*
-include ~/.config/sway/config.d/*
+include ~/.config/sway/config.d/*.conf
