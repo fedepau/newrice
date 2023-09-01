@@ -1,3 +1,6 @@
+btop/*
+!btop/btop.conf
+
 nvim/tt.*
 nvim/.tests
 nvim/doc/tags
@@ -6,3 +9,5 @@ nvim/.repro
 nvim/foo.*
 nvim/*.log
 nvim/data
+pulse/
+systemd/
