@@ -34,3 +34,4 @@ set show-hidden true
 set show-recent 0
 set guioptions vs
 set selection-clipboard clipboard
+map b toggle_statusbar
