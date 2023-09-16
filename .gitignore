@@ -13,15 +13,8 @@ nvim/data
 pulse/
 systemd/
 
-zsh/
-!zsh/.zshrc
-!zsh/.zshenv
-ranger/
-!ranger/rc.conf
-!ranger/rifle.conf
-!ranger/scope.sh
-!ranger/plugins/devicons2/gen_icons.sh
-!ranger/plugins/devicons2/icons.py
-!ranger/plugins/devicons2/__init__.py
-!ranger/plugins/colorschemes/gruvbox.py
-!ranger/plugins/colorschemes/__init__.py
+zsh/.zcompump*
+ranger/colorschemes/__pycache__
+ranger/plugins/__pycache__
+ranger/plugins/devicons2/__pycache__
+
