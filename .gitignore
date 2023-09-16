@@ -13,7 +13,7 @@ nvim/data
 pulse/
 systemd/
 
-zsh/.zcompump*
+zsh/.zcompdump*
 ranger/colorschemes/__pycache__
 ranger/plugins/__pycache__
 ranger/plugins/devicons2/__pycache__
