@@ -40,7 +40,7 @@
  
   "custom/launcher": {
     "format": "󱅥",
-    "on-click": "exec rofi -show drun",
+    "on-click": "exec rofi -show drun > /dev/null 2>&1 -theme ~/.config/rofi/config.rasi",
     "tooltip": false
   },
   
@@ -235,7 +235,7 @@
 
   "custom/power": {
     "format": "⏽",
-    "on-click": "rofi -show powermenu -modi powermenu:~/.local/bin/rofi-power-menu",
+    "on-click": "~/.local/bin/powermenu.sh",
     "tooltip": false
   },
 }
