@@ -1,84 +1,160 @@
 configuration {
-  threads: 0;
-  modi: "calc,drun,window,power-menu:~/.local/bin/rofi-power-menu,ssh";
-  case-sensitive: false;
-  cycle: false;
-  scroll-method: 1;
-  normalize-match: true;
-  no-lazy-grab: true;
-  show-icons: true;
-  icon-theme: "Papirus";
-  markup: true;
+  modi:                "drun";
+    show-icons:         true;
+    display-drun:      "";
   drun-display-format: "{name}";
-  location: 0;
-  sidebar-mode: false;
-  hover-select: false;
-  eh: 1;
-  terminal: "kitty";
-  display-calc: "Calculator:";
-  display-drun: "Application:";
-  display-ssh: "SSH:";
-  display-window: "Window:";
 }
 
-@theme "/dev/null"
+@import "config.d/colors.rasi"
+@import "config.d/fonts.rasi"
 
-* {
-  background-color: #282828;
-  font: "JetBrainsMonoNL Nerd Font 12";
-  text-color: #ebdbb2;
+window {
+    transparency:               "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       750px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               8px;
+    border-color:                @selected;
+    background-color:            @background;
+    cursor:                     "default";
 }
 
-#window {
-  border: 2px;
-  border-radius: 8px;
-  border-color: #fe8019;
-  transparency: "real";
-  width: 35%;
-  height: 485;
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
 }
 
-#scrollbar {
-  enabled: true;
-  background-color: #1d2021;
-  handle-color: #3c3836;
-  border-color: #000000;
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @selected;
+    text-color:                  @background;
+    children:                    [ "prompt", "entry" ];
 }
 
-#listview {
-  columns: 1;
-  fixed-height: false;
-  dynamic: true;
-  scrollbar: true;
-  spacing: 10;
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
 }
-
-#prompt,
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                        "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
 entry {
-  padding: 8px;
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                "Search...";
+    placeholder-color:           inherit;
 }
 
-#textbox {
-  padding: 20px;
-}
-
-#element-text,
-button,
 listview {
-  padding: 4px 8px 4px 0px;
+    enabled:                     true;
+    columns:                     5;
+    lines:                       3;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                     "default";
 }
 
-#element.selected {
-  background-color: #665c54;
-  padding: 4px 8px 4px 0px;
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
 }
 
-element-text, element-icon {
-  background-color: inherit;
-  text-color: inherit;
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     20px 10px;
+    border:                      0px solid;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    cursor:                      pointer;
 }
 
-#button.selected {
-  background-color: #fe8019;
-  text-color: #1d2021;
+element normal.normal {
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        64px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+textbox {
+    background-color:            @background;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
 }
