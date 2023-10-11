@@ -1,4 +1,21 @@
-dconf
+dconf/
+FreeCAD/
+GIMP/
+gtk-2.0/
+gtk-3.0/
+inkscape/
+ipython/
+jupyter/
+kicad/
+libreoffice/
+libvirt/
+npm/
+Ovito/
+pulse/
+qBittorrent/
+QtProject.conf/
+torbrowser/
+
 
 nvim/tt.*
 nvim/.tests
