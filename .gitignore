@@ -1,5 +1,3 @@
-btop/*
-!btop/btop.conf
 dconf
 
 nvim/tt.*
