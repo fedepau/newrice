@@ -12,7 +12,7 @@ set $menu "rofi -show drun > /dev/null 2>&1 -theme ~/.config/rofi/config.rasi"
 set $browser "firefox"
 set $lock "swaylock"
 set $lab "jupyter-lab"
-set $calc "kitty -e --class=calc bc -lq"
+set $calc "kitty -e --class=calculator bc -lq"
 
 # appearance
 default_border none
