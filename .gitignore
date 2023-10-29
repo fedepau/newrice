@@ -1,7 +1,9 @@
+BraveSoftware
 dconf/
 FreeCAD/
 GIMP/
 git/
+gopass/
 gtk-2.0/
 gtk-3.0/
 inkscape/
@@ -13,6 +15,7 @@ libvirt/
 maestral/
 matplotlib/
 menus/
+mimeapps.list
 mpv/
 MusE/
 neofetch/
@@ -34,4 +37,6 @@ ranger/plugins/__pycache__
 ranger/plugins/devicons2/__pycache__
 systemd/
 torbrowser/
+user-dirs.dirs
+user-dirs.locale
 zsh/.zcompdump*
