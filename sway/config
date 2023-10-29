@@ -15,8 +15,8 @@ set $lab "jupyter-lab"
 set $calc "kitty -e --class=calc bc -lq"
 
 # appearance
-default_border pixel 2
-default_floating_border pixel 2
+default_border none
+default_floating_border none
 gaps inner 4
 gaps outer 0
 
