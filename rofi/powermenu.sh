@@ -6,17 +6,18 @@ theme='powermenu'
 uptime="$(uptime -p | sed -e 's/up //g')"
 host=$(hostname)
 
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-yes=''
-no=''
+# Options
+shutdown=' Shutdown'
+reboot=' Reboot'
+lock=' Lock'
+suspend=' Suspend'
+logout=' Logout'
+yes=' Yes'
+no=' No'
 
 rofi_cmd() {
 	rofi -dmenu \
-		-p "Uptime: $uptime" \
+		-p "$host" \
 		-mesg "Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi
 }
