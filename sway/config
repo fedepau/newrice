@@ -8,11 +8,14 @@ set $right l
 
 # applications
 set $term "kitty"
+set $scratch "kitty --class=scratch"
 set $menu "rofi -show drun > /dev/null 2>&1 -theme ~/.config/rofi/config.rasi"
-set $browser "firefox"
+set $powermenu "~/.local/bin/powermenu.sh > /dev/null 2>&1"
+set $browser "MOZ_ENABLE_WAYLAND=1 firefox"
 set $lock "swaylock"
 set $lab "jupyter-lab"
 set $calc "kitty -e --class=calculator bc -lq"
+set $mount "kitty -e --class=bashmount bashmount"
 
 # appearance
 default_border none
