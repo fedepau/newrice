@@ -6,7 +6,7 @@
   "width": 1912,
   "modules-left": ["sway/workspaces", "sway/scratchpad", "custom/launcher", "cpu", "temperature", "memory", "disk#root", "custom/weather"],
   "modules-center": ["clock"],
-  "modules-right": ["idle_inhibitor", "backlight", "pulseaudio", "network#interface", "network#band", "battery#BAT0", "custom/power"],
+  "modules-right": ["idle_inhibitor", "backlight", "pulseaudio", "network#interface", "network#band_up", "network#band_down", "battery#BAT0", "custom/power"],
   "margin": "4, 0, 0, 0",
   "spacing": 8,
   "mode": "dock",
@@ -121,7 +121,7 @@
 
   "clock": {
     "interval": 1,
-    "format": "{:%H:%M %a, %b %d}",
+    "format": "{:%H:%M:%S %a, %b %d}",
     // "timezone":
     "max-length": 24,
     "tooltip": true,
@@ -178,7 +178,7 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol --class=pavu",
     "on-scroll-up": "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "on-scroll-down": "pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "smooth-scrolling-threshold": 0.5
@@ -198,10 +198,21 @@
     "tooltip-format-disconnected": "Disconnected"
   },
 
-  "network#band": {
+  "network#band_down": {
     "interval": 1,
-    "format": " {bandwidthDownBytes}  {bandwidthUpBytes}",
-    "min-length": 16,
+    "format-wifi": " {bandwidthDownBytes}",
+    "format-ethernet": " {bandwidthDownBytes}",
+    "min-length": 10,
+    "max-length": 10,
+    "tooltip": false
+  },
+
+  "network#band_up": {
+    "interval": 1,
+    "format-wifi": " {bandwidthUpBytes}",
+    "format-ethernet": " {bandwidthUpBytes}",
+    "min-length": 10,
+    "max-length": 10,
     "tooltip": false
   },
 

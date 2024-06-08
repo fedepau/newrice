@@ -1,7 +1,7 @@
 * {
   transition: none;
   box-shadow: none;
-  font-family: "JetBrainsMonoNL Nerd Font";
+  font-family: "JetBrainsMonoNL NF";
   font-size: 16px;
   color: #fe8019;
 }
@@ -9,7 +9,7 @@
 #waybar {
   margin: 0px;
   background: alpha(#282828, 0.8);
-  border-radius: 8px;
+  border-radius: 0px;
   border: 2px solid #fe8019;
 }
 
