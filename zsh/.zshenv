@@ -1,9 +1,13 @@
-export EDITOR=nvim
-export MANPAGER='nvim +Man!'
-export VISUAL=nvim
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export ZDOTDIR="$HOME"/.config/zsh
+export PATH=$HOME/.local/bin:$PATH
+export EDITOR=nvim
 export JUPYTER_PLATFORM_DIRS="1"
+export MANPAGER='nvim +Man!'
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export QT_QPA_PLATFORM=wayland
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export VISUAL=nvim
 export WORKON_HOME="$HOME"/.virtualenvs
+export ZDOTDIR="$HOME"/.config/zsh
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc

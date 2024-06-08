@@ -70,7 +70,7 @@ ZSH_THEME="gallois"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fast-syntax-highlighting rsync ssh-agent sudo virtualenvwrapper wd zoxide)
+plugins=(fast-syntax-highlighting rsync ssh-agent sudo virtualenvwrapper wd zoxide zsh-history-substring-search vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 
 source $ZDOTDIR/aliases.zsh
 source $ZDOTDIR/hist.zsh
+source $ZDOTDIR/preferences.zsh
